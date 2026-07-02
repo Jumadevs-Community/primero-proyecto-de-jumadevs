@@ -34,3 +34,5 @@ async def export_csv(project_id: int, current_user: int = Depends(get_current_us
     output.seek(0)
     return StreamingResponse(iter([output.getvalue()]), media_type="text/csv",
         headers={"Content-Disposition": f"attachment; filename=project_{project_id}_tasks.csv"})
+
+# subtask: completion_pct and by_status breakdown
