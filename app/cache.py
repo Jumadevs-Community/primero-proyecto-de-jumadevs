@@ -28,3 +28,5 @@ async def cache_delete(key: str) -> None:
 async def cache_delete_pattern(pattern: str) -> None:
     async for key in get_redis().scan_iter(pattern):
         await get_redis().delete(key)
+
+# task: Redis cache layer
