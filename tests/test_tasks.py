@@ -26,3 +26,5 @@ async def test_task_not_found():
     async with AsyncClient(app=app, base_url="http://test") as client:
         res = await client.get("/tasks/99999", headers={"Authorization": "Bearer <token>"})
         assert res.status_code == 404
+
+# additional task tests
