@@ -23,3 +23,5 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
 
 
 rate_limit_middleware = RateLimitMiddleware
+
+# task: rate limiting — 100 req/min
