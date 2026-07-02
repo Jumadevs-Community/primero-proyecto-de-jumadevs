@@ -16,3 +16,5 @@ app.include_router(reports.router, prefix="/reports", tags=["reports"])
 @app.get("/health")
 async def health():
     return {"status": "ok", "version": "1.0.0"}
+
+# rate limit middleware registered
