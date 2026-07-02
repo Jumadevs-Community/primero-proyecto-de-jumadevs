@@ -30,3 +30,5 @@ async def test_refresh_token():
         login = await client.post("/auth/login", data={"username": "test@example.com", "password": "secret123"})
         refresh = await client.post("/auth/refresh", json={"refresh_token": login.json()["refresh_token"]})
         assert refresh.status_code == 200 and "access_token" in refresh.json()
+
+# middleware coverage
