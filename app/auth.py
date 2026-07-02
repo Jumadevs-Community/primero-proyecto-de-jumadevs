@@ -40,3 +40,5 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
         return int(user_id)
     except JWTError:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Could not validate credentials")
+
+# subtask: create_access_token and create_refresh_token
